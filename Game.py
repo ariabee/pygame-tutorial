@@ -78,7 +78,7 @@ class Player(pygame.sprite.Sprite):
 class Player2(pygame.sprite.Sprite):
     def __init__(self):
         super().__init__() 
-        self.image = pygame.image.load("Player.png")
+        self.image = pygame.image.load("Player2.png")
         #TODO add new player image
         self.surf = pygame.Surface((40, 75))
         self.rect = self.surf.get_rect(center = (160, 420))
