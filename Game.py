@@ -75,16 +75,41 @@ class Player(pygame.sprite.Sprite):
               if pressed_keys[K_RIGHT]:
                   self.rect.move_ip(5, 0)
                   
+class Player2(pygame.sprite.Sprite):
+    def __init__(self):
+        super().__init__() 
+        self.image = pygame.image.load("Player.png")
+        #TODO add new player image
+        self.surf = pygame.Surface((40, 75))
+        self.rect = self.surf.get_rect(center = (160, 420))
+       
+    def move(self):
+        pressed_keys = pygame.key.get_pressed()
+       #if pressed_keys[K_UP]:
+            #self.rect.move_ip(0, -5)
+       #if pressed_keys[K_DOWN]:
+            #self.rect.move_ip(0,5)
+        
+        if self.rect.left > 0:
+              if pressed_keys[K_a]:
+                  self.rect.move_ip(-5, 0)
+        if self.rect.right < SCREEN_WIDTH:        
+              if pressed_keys[K_d]:
+                  self.rect.move_ip(5, 0)
+                  
 
 #Setting up Sprites        
 P1 = Player()
+P2 = Player2()
 E1 = Enemy()
 
 #Creating Sprites Groups
+#TODO add the players to each others enemy groups
 enemies = pygame.sprite.Group()
 enemies.add(E1)
 all_sprites = pygame.sprite.Group()
 all_sprites.add(P1)
+all_sprites.add(P2)
 all_sprites.add(E1)
 
 #Adding a new User event 
@@ -114,7 +139,7 @@ while True:
         entity.move()
 
     #To be run if collision occurs between Player and Enemy
-    if pygame.sprite.spritecollideany(P1, enemies):
+    if pygame.sprite.spritecollideany(P1, enemies) or pygame.sprite.spritecollideany(P2, enemies): #different enemy groups for players?
           pygame.mixer.Sound('crash.wav').play()
           time.sleep(1)
                    
@@ -126,7 +151,7 @@ while True:
                 entity.kill() 
           time.sleep(2)
           pygame.quit()
-          sys.exit()        
+          sys.exit()   
         
     pygame.display.update()
     FramePerSec.tick(FPS)
