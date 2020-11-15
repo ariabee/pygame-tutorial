@@ -89,7 +89,8 @@ class Enemy(pygame.sprite.Sprite):
 
     def move(self):
         # enemy moves downwards until it reaches the end of the screen, then appears again at top
-        self.rect.move_ip(0, 10)
+        self.rect.move_ip(0, 10)    # first representing the distance to be moved in the X direction and second, the
+                                    # distance to be moved in the Y direction.
         if (self.rect.bottom > 600):
             self.rect.top = 0
             self.rect.center = (random.randint(30, 370), 0)
