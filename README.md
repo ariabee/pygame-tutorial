@@ -3,7 +3,7 @@
 We used the Python Pygame tutorial provided by https://coderslegacy.com/python/python-pygame-tutorial/ to build a small Pygame application, with an additional feature.
 
 ## Additional Feature: Multiplayer cars
-The standard car-avoids-enemy-cars game is now a two-player endeavor. A second player controls a car using the a and d keys for left and right motion. Both cars must avoid collision with the enemy vehicles in order to keep the game going.
+The standard car-avoids-enemy-cars game is now a two-player endeavor. A second player controls a car using the a and d keys for left and right motion. Both cars must avoid collision with the enemy vehicles, and with each other, in order to keep the game going.
 
 ## How to Use (Development)
 - Have python installed. Check https://www.pygame.org/wiki/GettingStarted for details.
