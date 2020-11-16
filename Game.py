@@ -79,6 +79,9 @@ class Player(pygame.sprite.Sprite):
 
 
 class Player2(pygame.sprite.Sprite):
+    """
+    Class for a second player. Uses wasd-keys to move.
+    """
     def __init__(self):
         super().__init__()
         self.image = pygame.image.load("Player2.png")
@@ -147,6 +150,7 @@ while True:
         entity.move()
 
     # To be run if collision occurs between Player and Enemy
+    # The two players also crash when they touch each other
     if pygame.sprite.spritecollideany(P1, enemies_P1) or pygame.sprite.spritecollideany(P2, enemies_P2):
         pygame.mixer.Sound('crash.wav').play()
         time.sleep(1)
