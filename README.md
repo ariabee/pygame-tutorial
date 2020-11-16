@@ -1,4 +1,5 @@
-# pygame-tutorial group assignment
+# Pygame Tutorial Group Assignment
+Language, Action, and Perception; Week 3
 
 We used the Python Pygame tutorial provided by https://coderslegacy.com/python/python-pygame-tutorial/ to build a small Pygame application, with an additional feature.
 
