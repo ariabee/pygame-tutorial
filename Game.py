@@ -1,3 +1,6 @@
+# Pygame tuturial based on: https://coderslegacy.com/python/python-pygame-tutorial/
+# Practice and additional features by: Susann Boy, Ben Posner, AriaRay Brown
+
 # Imports
 import pygame, sys
 from pygame.locals import *
