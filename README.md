@@ -14,7 +14,7 @@ Code updates:
 - Player2 uses a-d-w-s keys to move left-right-up-down.
 - Player1 uses left, right, up, and down keys to move similarly.
 - Both players begin in positions on opposite sides of the display.
-- A separate enemy sprite group exists for each player.
+- The players share an enemy sprite group (the enemy cars that move towards the players).
 - Collisions are checked between players and their enemies, and between players themselves.
 
 ## How to Use (Development)
